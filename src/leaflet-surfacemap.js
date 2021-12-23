@@ -292,7 +292,9 @@ L.SurfaceCircle.addInitHook(function(){
     spotEditor.inputs['world_y'].value = L.surfaceNumberFormatter(world1[1]);
     spotEditor.inputs['radius_in_um'].value = L.surfaceNumberFormatter(radius_in_um);
   });
-  this.bindTooltip(spot.name, {permanent: true, className: "spotLabel", offset: [0, 0], opacity: 0.9 });
+  if (spot !== undefined){
+    this.bindTooltip(spot.name, {permanent: true, className: "spotLabel", offset: [0, 0], opacity: 0.9 });
+  }
 });
 L.surfaceCircle = function(latlng, options) {
   var marker = new L.SurfaceCircle(latlng, options);
