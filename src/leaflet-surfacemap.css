@@ -1,0 +1,11 @@
+.spotLabel {
+  background: transparent;
+  color: white;
+  border: none;
+}
+.leaflet-tooltip-left.spotLabel::before {
+  border-left-color: white;
+}
+.leaflet-tooltip-right.spotLabel::before {
+  border-right-color: white;
+}
